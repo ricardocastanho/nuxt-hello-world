@@ -14,11 +14,14 @@
 <script>
 import Vue from 'vue'
 
+import EventService from '@/services/EventService'
+
 export default Vue.extend({
   name: 'EventListPage',
-  async asyncData({ $axios }) {
+  async asyncData() {
     try {
-      const { data } = await $axios.get('http://localhost:3001/events')
+      const { data } = await EventService.getEvents()
+
       return {
         events: data
       }
