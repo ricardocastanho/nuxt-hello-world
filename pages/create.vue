@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Events</h1>
+    <h1>Create an Event</h1>
   </div>
 </template>
 
@@ -8,6 +8,6 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage',
+  name: 'CreatePage',
 })
 </script>
