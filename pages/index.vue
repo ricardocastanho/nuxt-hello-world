@@ -9,5 +9,10 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'IndexPage',
+  head() {
+    return {
+      title: 'Event Listing'
+    }
+  }
 })
 </script>

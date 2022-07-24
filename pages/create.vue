@@ -9,5 +9,10 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'CreatePage',
+  head() {
+    return {
+      title: 'Create an Event'
+    }
+  }
 })
 </script>
