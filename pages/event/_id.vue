@@ -5,7 +5,9 @@
 </template>
 
 <script>
-export default {
+import Vue from 'vue'
+
+export default Vue.extend({
   name: 'EventShowPage',
   head() {
     return {
@@ -24,5 +26,5 @@ export default {
       return this.$route.params.id
     }
   }
-}
+})
 </script>
