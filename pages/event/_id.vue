@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Event #{{ id }}</h1>
+    <h1>{{ event.title }}</h1>
   </div>
 </template>
 
@@ -9,6 +9,21 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'EventShowPage',
+  async asyncData({ $axios, error, params }) {
+    try {
+      const { data } = await $axios.get(
+        'http://localhost:3001/events/' + params.id
+      )
+      return {
+        event: data
+      }
+    } catch {
+      error({
+        statusCode: 503,
+        message: 'Unable to fetch event #' + params.id
+      })
+    }
+  },
   head() {
     return {
       title: 'Event #' + this.id,

@@ -16,17 +16,18 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'EventListPage',
-  asyncData(ctx) {
-    return ctx.$axios.get('http://localhost:3001/events').then(response => {
+  async asyncData({ $axios }) {
+    try {
+      const { data } = await $axios.get('http://localhost:3001/events')
       return {
-        events: response.data
+        events: data
       }
-    }).catch(() => {
+    } catch {
       error({
         statusCode: 503,
-        message: 'Unable to fetch events at this time, please try again'
+        message: 'Unable to fetch events events at this time'
       })
-    })
+    }
   },
   head() {
     return {
