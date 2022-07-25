@@ -48,4 +48,8 @@ export default {
    ** Customize the progress-bar color
    */
   loading: { color: '#39b982' },
+
+  generate: {
+    routes: ['/event'],
+  },
 }
