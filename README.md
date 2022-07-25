@@ -1,5 +1,7 @@
 # nuxt-hello-world
 
+![nuxt](https://user-images.githubusercontent.com/48383095/180671440-402feb55-0743-44ff-9a1c-1375320c13a2.png)
+
 ## Build Setup
 
 ```bash
